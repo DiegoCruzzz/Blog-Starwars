@@ -1,0 +1,14 @@
+.horizontal-scroll-container {
+    display: flex; /* Usamos flexbox para alinear los elementos horizontalmente */
+    overflow-x: auto; /* Habilitamos el scroll horizontal */
+    /*white-space: nowrap; /* Evitamos que los elementos se envuelvan */
+    width: 100%; /* O el ancho que desees */
+}
+
+.item {
+    min-width: 200px;  /*Ancho mínimo para cada elemento */
+    margin: 10px;  /*Espaciado entre elementos */
+    background-color: #ccc;  /*AColor de fondo */
+    padding: 20px; /*AEspacio interno */
+    text-align: center;  /*ACentrar texto */
+}

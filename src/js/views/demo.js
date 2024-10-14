@@ -10,30 +10,20 @@ export const Demo = () => {
 
 	return (
 		<div className="container">
-			<ul className="list-group">
-				{store.demo.map((item, index) => {
-					return (
-						<li
-							key={index}
-							className="list-group-item d-flex justify-content-between"
-							style={{ background: item.background }}>
-							<Link to={"/single/" + index}>
-								<span>Link to: {item.title}</span>
-							</Link>
-							{// Conditional render example
-							// Check to see if the background is orange, if so, display the message
-							item.background === "orange" ? (
-								<p style={{ color: item.initial }}>
-									Check store/flux.js scroll to the actions to see the code
-								</p>
-							) : null}
-							<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
-								Change Color
-							</button>
-						</li>
-					);
-				})}
-			</ul>
+			<div className="card mb-3">
+				<div className="card-body">
+					<h2 className="card-title">{store.personInfo.name}</h2>
+					<p className="card-text">Año de nacimineto: {store.personInfo.birth_year}</p>
+					<p className="card-text">Altura: {store.personInfo.height} cm</p>
+					<p className="card-text">Peso: {store.personInfo.mass} kg</p>
+					<p className="card-text">Genero: {store.personInfo.gender}</p>
+					<p className="card-text">Color de piel: {store.personInfo.skin_color}</p>
+					<p className="card-text">Color de pelo: {store.personInfo.hair_color}</p>
+					
+				</div>
+				<img className="card-img-top" src="https://static.wikia.nocookie.net/406305c5-f76d-4bcd-af67-b4b897fbff18" alt="Card image cap" />
+			</div>
+			
 			<br />
 			<Link to="/">
 				<button className="btn btn-primary">Back home</button>
